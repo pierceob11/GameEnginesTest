@@ -13,20 +13,14 @@ public class EagleSpawner : MonoBehaviour {
 
     void Awake()
     {
-        //float theta = (Mathf.PI * 2);
-
-        //Vector3 RightoffsetPos = new Vector3(gap, 0, -gap);
-        //Vector3 LeftoffsetPos = new Vector3(-gap, 0, -gap);
-        //float plusorMinus = -1;
-
 
         for(int i = 0 ; i < followers; i++)
         {
             for (int j = 0; j < followers; j++)
             {             
-                Instantiate(prefab, new Vector3((i) * gap, 0, (j) * -gap), Quaternion.identity);
-                //i *= -1;
-                
+                Instantiate(prefab, new Vector3((i + 1) * gap, 0, (j + 1) * -gap), Quaternion.identity);
+
+                //i *= -1;           
             }
         }
     }
